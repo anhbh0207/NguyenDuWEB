@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trường THCS Nguyễn Du</title>
+    <style>
+        .container {
+            max-width: 1169px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .topbar {
+            background-color: #0c2f5c;
+            font-size: 14px;
+            padding: 4px 10px;
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+        }
+
+        .topbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .topbarmini {
+            display: flex;
+            align-items: center;
+            max-width: 1169px;
+            margin: auto;
+            padding: 0;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            background-color: #0c2f5c;
+        }
+
+        .nav a {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            margin: 15px;
+            text-decoration: none;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            min-width: 160px;
+            padding: 0;
+            box-shadow: 0 2px 2px;
+        }
+
+        .nav li:hover ul {
+            display: block;
+        }
+
+        .nav ul li:hover {
+            background-color: white;
+        }
+
+        .nav ul li:hover > a {
+            color: grey;
+        }
+
+        .nav li ul li {
+            padding: 10px;
+            background-color: white;
+        }
+
+        .nav li ul li a {
+            color: black;
+        }
+
+        .nav li ul li:hover {
+            background-color: #1a417a;
+        }
+
+        .nav li ul li:hover a {
+            color: white;
+        }
+
+        .time {
+            padding: 5px;
+            max-width: 194px;
+            margin-right: 5px;
+        }
+
+        marquee {
+            float: right;
+            max-width: 965px;
+            color: #0c2f5c;
+        }
+
+        .khu-vuc-tin-tuc {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .tin-ben-trai {
+            width: 300px;
+            height: 369px;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .tin-ben-trai img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .mo-ta {
+            background-color: #072b61;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+            height: auto;
+        }
+
+        .tin-ben-phai {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .tin-nho {
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .tin-nho img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .noi-dung-tin-nho {
+            font-size: 14px;
+        }
+
+        .noi-dung-tin-nho h5 {
+            margin: 0;
+            font-size: 14px;
+            color: #000;
+        }
+
+        .noi-dung-tin-nho span {
+            font-size: 12px;
+            color: #555;
+        }
+        .tt{
+            padding: 5px;
+            max-width: 1169px;
+            margin: auto;
+            padding: 0;
+        }
+        .chan-trang {
+            background-color: #0c2f5c;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px 0 10px 0;
+            margin-top: 30px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1169px;
+            margin: auto;
+        }
+
+        .cot-footer {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+        }
+
+        .cot-footer h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid white;
+            padding-bottom: 5px;
+        }
+
+        .cot-footer p,
+        .cot-footer ul {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .cot-footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cot-footer ul li {
+            margin: 6px 0;
+        }
+
+        .cot-footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .cot-footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .ban-quyen {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="topbar">
+        <div><a href="#">⇲ Đăng nhập</a></div>
+        <div>
+            <a href="#">RSS</a>&nbsp;&nbsp;
+            <a href="#">🔍</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="THCSND.html"><img src="header.png" alt=""></a>
+        
+    </div>
+
+    <div class="nav">
+        <ul class="container">
+            <li><a href="THCSND.html"><b>TRANG CHỦ</b></a></li>
+            <li><a href="#"><b>GIỚI THIỆU</b></a>
+                <ul>
+                    <li><a href="gioi-thieu-chung.html">Giới thiệu chung</a></li>
+                    <li><a href="co-cau-to-chuc.html">Cơ cấu tổ chức</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><b>THÔNG BÁO</b></a></li>
+            <li><a href="#"><b>TIN TỨC</b></a></li>
+            <li><a href="#"><b>THI VÀ TUYỂN SINH</b></a></li>
+            <li><a href="#"><b>KHO HỌC LIỆU</b></a></li>
+            <li><a href="#"><b>HỆ THỐNG THI TRẮC NGHIỆM</b></a></li>
+            <li><a href="#"><b>TÂM SỰ HỌC ĐƯỜNG</b></a></li>
+            <li><a href="#"><b>LIÊN HỆ</b></a></li>
+        </ul>
+    </div>
+
+    <div class="topbarmini">
+        <div class="time">Thứ 3, 08/04/2025 &nbsp; 21:40:01</div>
+        <marquee behavior="scroll" direction="left"><b>Chào mừng bạn đến với trường THCS Nguyễn Du</b></marquee>
+    </div>
+<hr class="container">
+<div class="container">
+    <h2>Giới thiệu</h2>
+<div align="center">Địa chỉ:  44 - 46 Hàng Quạt <br>
+
+Email :  c2nguyendu-hk@hanoiedu.vn <br>
+
+Điện thoại :02438241724 <br> <br></div>
+
+1. Mô hình hoạt động: Chất lượng cao. <br>
+
+2. Đội ngũ giáo viên: 100% giáo viên tốt nghiệp Đại học trong đó hơn 30% có trình độ Thạc sĩ, một nhà giáo ưu tú. Là những giáo viên giỏi, chiễn sĩ thi đua được tuyển chọn từ những trường THCS có uy tín của TỉnhThành, có năng lực chuyên môn vững vàng, có kinh nghiệm ôn thi học sinh giỏi, du học quốc tế; phẩm chất đạo đức tốt, tâm huyết với nghề, có phong cách ứng xử thân thiện với học sinh và phụ huynh học sinh. Ngoài ra, trường còn mời đội ngũ giáo viên người nước ngoài có kinh nghiệm giảng dạy, thân thiện với học sinh. <br>
+
+3. Mục tiêu đào tạo: <br>
+- Xây dựng nhà trường thành một đơn vị giáo dục chất lượng cao phù hợp với tinh thần số 07 của Sở Giáo dục về việc phát triển giáo dục trình độ chất lượng cao. <br>
+- Giúp học sinh phát triển toàn diện về đạo đức và trí tuệ, thể chất, thẩm mỹ và các kỹ năng cơ bản, phát triển năng lực cá nhân, tính năng động, sáng tạo, ý chí vươn lên và khả năng thích ứng cao. <br>
+- Trang bị kiến thức cơ bản theo tiêu chuẩn kiến thức của Bộ GD-ĐT, đảm bảo đạt điểm cao trong các kì thi học sinh giỏi, thi vào lớp 10 THPT, thi đỗ vào lớp 10 các trường THPT Chuyên và THPT chất lượng cao của Thành phố. <br>
+
+4. Phương châm giáo dục: <br>
+- Quan tâm giáo dục toàn diện: kết hợp giáo dục kiến thức chuẩn với coi trọng giáo dục đạo đức, rèn luyện kĩ năng thực hành, kĩ năng sống, tổ chức các hoạt động giáo dục ngoài giờ lên lớp, ngoại khóa và bồi dưỡng học sinh có năng khiếu. <br>
+- Phát huy tính tích cực, chủ động, sáng tạo của học sinh: Khơi dậy và hun đúc cho mỗi ý tưởng sáng tạo, mỗi khả năng tiềm ẩn của các em, tăng cường khả năng thuyết trình, làm việc độc lập, làm việc theo nhóm để mỗi học sinh được thành công trong học tập và cuộc sống. <br>
+- Giao lưu và hội nhập quốc tế qua việc chú trọng dạy môn ngoại ngữ với bốn kĩ năng cơ bản giúp học sinh giao lưu và hội nhập tốt với bạn bè quốc tế, tổ chức liên kết với một số trường quốc tế giúp học sinh làm quen với môi trường giáo dục chuẩn quốc tế. <br>
+- Quan tâm đến vấn đề tâm lý học đường thông qua việc phối hợp với các trung tâm tư vấn tâm lý giáo dục giúp các em học sinh có tâm thế học tập thân thiện, tự tin, thoải mái và hiệu quả. <br>
+
+5. Phương thức hoạt động của trường: <br>
+* Hoạt động dạy và học:<br>
+- Thực hiện phương pháp giáo dục và dạy học tiên tiến với sự hỗ trợ tối ưu của trang thiết bị hiện đại. Tích cực đổi mới phương pháp giảng dạy và đào tạo phù hợp với mô hình đào tạo chất lượng cao; Bố trí sắp xếp thời khóa biểu hợp lý đảm bảo thời lượng cho các buổi học, tiết học tự chọn, nâng cao, ngoại khoá chuyên đề <br>
+- Tổ chức học bán trú hai buổi với chương trình tăng cường nâng cao, với sự quản lý kỉ luật nghiêm túc, nề nếp, quy củ.<br>
+- Tổ chức học theo phòng học bộ môn, học trên mạng; mở rộng các hình thức dạy và học đối với các trường trong và ngoài nước.<br>
+- Chỉ đạo khai thác, sử dụng có hiệu quả trang thiết bị phòng thí nghiệm, thực hành.<br>
+- Liên kết với các trường THPT, Đại Học trong và ngoài tỉnh, Trung tâm ngoại ngữ, …để mời giáo viên tham gia giảng dạy các chuyên đề, các Câu lạc bộ.<br>
+- Liên kết với một số trường ở các nước có nền giáo dục phát triển như Singapore, Anh quốc, Austraylia…để tổ chức liên hoan trại hè cho học sinh tham quan hội nhập, du học có học bổng…<br>
+- Tổ chức Câu lạc bộ năng khiếu cho học sinh (Văn hóa, nghệ thuật, thể thao…) Tổ chức các buổi hội thảo, cimena, các cuộc thi olympic… phục vụ cho công tác dạy và học.<br>
+
+* Hoạt động giáo dục toàn diện:<br>
+- Thực hiện các Kế hoạch<br>
+- Chương trình theo hướng dẫn của nhiệm vụ năm học các ngày kỉ niệm, ngày lễ lớn trong năm, sinh hoạt chủ đề…<br>
+- Tăng cường các hoạt động Đoàn – Đội – Câu lạc bộ năng khiếu, CLB Văn, Thể, Mỹ theo sở thích<br>
+- Tăng cường các hoạt động giao lưu bằng nhiều hình thức như: Thi đấu thể thao, biểu diễn văn nghệ, thi vẽ tranh, thi hùng biện, thi học sinh thanh lịch…với các trường bạn, các trường trong khu vực và quốc tế<br>
+- Tăng cường hoạt động của đội ngũ giáo viên chủ nhiệm, giáo viên bộ môn, các tổ chức xã hội, giao lưu các hoạt động văn hoá, văn nghệ, thể dục thể thao.<br>
+
+
+<h3>Ban giám hiệu Trường THCS Nguyễn Du</h3>
+</div>
+
+
+    <footer class="chan-trang">
+        <div class="footer-container">
+            <div class="cot-footer">
+                <h4>TRƯỜNG THCS NGUYỄN DU</h4>
+                <p>📍 Địa chỉ: 123 Nguyễn Trãi, Hà Nội</p>
+                <p>☎ Điện thoại: (024) 3 123 4567</p>
+                <p>📧 Email: c2nguyendu@edu.vn</p>
+            </div>
+            <div class="cot-footer">
+                <h4>LIÊN KẾT NHANH</h4>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ban-quyen">
+            © 2025 Trường THCS Nguyễn Du. Mọi quyền được bảo lưu.
+        </div>
+    </footer>
+    
+</body>
+</html>
